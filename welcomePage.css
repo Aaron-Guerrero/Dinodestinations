@@ -1,23 +1,11 @@
-h1, p {
-  margin: 1em auto;
-  padding-top: 20px;
-  text-align: center;
-  color: #000000;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 body {
   width: 100%;
-  height: 20%;
   margin: 0;
-  background-color: #ffffff;
+  background: linear-gradient(to left, #76b852, #8DC26F, #5C4B51);
   color: #000000;
-  font-family: Tahoma;
+  font-family: 'Luckiest Guy', sans;
   font-size: 16px;
 }
 
@@ -25,7 +13,32 @@ body {
   text-align: center;
   text-transform: uppercase;
   padding: 32px;
-  background-color: #b7e892;
-  color: #ffffff;
-  border-bottom: 4px solid #fdb347;
+}
+
+form {
+  width: 60vw; 
+  max-width: 500px; 
+  min-width: 300px; 
+  margin: 0 auto; 
+  padding-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block; 
+  width: 80%; 
+  margin: 10px auto; 
+  border-radius: 5px;
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 16px;
+}
+
+label[for="signIn"] {
+  font-weight: bold;
+}
+
+input::placeholder {
+  font-family: 'Luckiest Guy', sans;
+  font-size: 16px;
+  color: #888888;
 }
