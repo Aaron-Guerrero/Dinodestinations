@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <img src="./images/dd_logo.png" alt="Dino Destinations" class="center">
-        <p>Welcome to Dino Destination!</p>
+        <p>Find dinosaur museums near you!</p>
     </header>
 
     <div class="tab-container">
@@ -19,9 +19,9 @@
         <div id="Login" class="tab-content">
             <form id="loginForm" action="/submit-form" method="POST">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required placeholder="Username">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>          
+                <input type="password" id="password" name="password" required placeholder="Password">          
                 <button type="submit">Login</button>
             </form>
         </div>
@@ -30,11 +30,13 @@
             <!-- Add your signup form here -->
             <!-- Example Signup form -->
             <form id="signupForm" action="/submit-signup" method="POST">
-                <label for="newUsername">Username:</label>
-                <input type="text" id="newUsername" name="newUsername" required>
-                <label for="newPassword">Password:</label>
-                <input type="password" id="newPassword" name="newPassword" required>          
-                <button type="submit">Signup</button>
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required placeholder="Username">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required placeholder="Password">
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
+                <button type="submit">Sign Up</button>
             </form>
         </div>
     </div>
