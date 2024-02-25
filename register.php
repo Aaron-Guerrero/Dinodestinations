@@ -1,8 +1,10 @@
 <?php
+session_start();
+
 $servername = "localhost";
-$dbUsername = "your_database_username";
-$dbPassword = "your_database_password";
-$dbname = "your_database_name";
+$dbUsername = "root"; // The default XAMPP MySQL username
+$dbPassword = ""; // The default XAMPP MySQL password is typically empty
+$dbname = "DinoDestinations";
 
 // Create connection
 $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
@@ -25,11 +27,17 @@ $stmt->bind_param("ss", $username, $hashedPassword);
 
 // Execute the prepared statement
 if ($stmt->execute()) {
-    echo "New user registered successfully";
+    $_SESSION['message'] = "Account created successfully";
 } else {
-    echo "Error: " . $stmt->error;
+    if ($conn->errno == 1062) { // Error code for duplicate entry
+        $_SESSION['message'] = "Username already exists";
+    } else {
+        $_SESSION['message'] = "Error: " . $stmt->error;
+    }
 }
 
 $stmt->close();
 $conn->close();
+
+header('Location: index.php');
 ?>
