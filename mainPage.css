@@ -18,12 +18,12 @@ body {
 
 #mainBox{background: #93dc5c; 
     padding: 20px 20px 20px 20px; 
-    height: 550px; width: 400px;
+    height: 85px; width: 400px;
     border-radius: 10px;
     border: 10px solid black;
     margin: auto;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     }
@@ -58,7 +58,8 @@ input[type="text"]{
         z-index: 2;
     }
 
-.logo{text-align: center;}
+.logo{text-align: center;
+    margin-top: 5%;}
 
 input::placeholder {
     font-family: 'Luckiest Guy', sans;
