@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=VF532KDre9g
 
 ## Usage
 
--Sign up on the main page. Using the credentials you signed up, simply log in and enter a city near you. The page will take you to destinations that feature dinosour attractions using google maps.
+Sign up on the main page. Using the credentials you signed up, simply log in and enter a city near you. The page will take you to destinations that feature dinosour attractions using google maps.
 
 ## Technologies Used
 
@@ -21,13 +21,8 @@ https://www.youtube.com/watch?v=VF532KDre9g
 
 ## Challenges
 
--We ran into numerous challenges. Setting up the API to Google Maps was one major challenge. Another was setting up a database to collect user information. Once a domain name was set aide - using porkbun to get the website displaying properly also proved a challenge - which was ultimately not overcome.
+We ran into numerous challenges. Setting up the API to Google Maps was one major challenge. Another was setting up a database to collect user information. Once a domain name was set aide - using porkbun to get the website displaying properly also proved a challenge - which was ultimately not overcome.
 
 ## Future Enhancements
 
--Implementing host/domain for the website. 
--Adding additional features like a community chat, dino games, and more!
-
-## Contact
-
-[Contact info for the team]
+In the near future, we plan on implementing a host/domain for the website. We also would like to add addiional features to enhance user experience like a community chat, dinosour games, and more!
