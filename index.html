@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="welcomePage.css" />
     <title>Dino Destinations</title>
-  </head>
-  <body>
+</head>
+<body>
     <header class="header">
-      <img src="./images/dd_logo.png" alt="Dino Destinations" class="center">
-      <p>Welcome to Dino Destination!</p>
+        <img src="./images/dd_logo.png" alt="Dino Destinations" class="center">
+        <p>Welcome to Dino Destination!</p>
     </header>
-    <form>
-      <div class="userInfo">
-        <label for="signIn">Sign In: </label>
-        <input id="userName" name="userName" type="text" required placeholder="User Name"/>
-        <input id="password" name="password" type="password" required placeholder="Password"/>
-      </div>
-    </form>
-  </body>
+
+    <div class="tab-container">
+        <button class="tab" onclick="openTab(event, 'Login')">Login</button>
+        <button class="tab" onclick="openTab(event, 'Signup')">Signup</button>
+
+        <div id="Login" class="tab-content">
+            <form id="loginForm" action="/submit-form" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>          
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="Signup" class="tab-content">
+            <!-- Add your signup form here -->
+            <!-- Example Signup form -->
+            <form id="signupForm" action="/submit-signup" method="POST">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>          
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
 </html>
