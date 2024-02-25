@@ -3,7 +3,7 @@ session_start();
 
 $servername = "localhost";
 $dbUsername = "root";
-$dbPassword = ""; // Replace with your actual password, if you have one.
+$dbPassword = ""; 
 $dbname = "DinoDestinations";
 
 // Create connection
@@ -33,15 +33,12 @@ if ($row = $result->fetch_assoc()) {
         $_SESSION['name'] = $row['username'];
         $_SESSION['id'] = $row['id'];
 
-        // Redirect to your protected page
         header('Location: mainPage.html');
     } else {
-        // Incorrect password
         $_SESSION['login_message'] = "Incorrect username or password";
         header('Location: index.php');
     }
 } else {
-    // Incorrect username
     $_SESSION['login_message'] = "Incorrect username or password";
     header('Location: index.php');
 }

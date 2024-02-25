@@ -2,14 +2,13 @@
 session_start();
 
 $servername = "localhost";
-$dbUsername = "root"; // The default XAMPP MySQL username
-$dbPassword = ""; // The default XAMPP MySQL password is typically empty
+$dbUsername = "root"; 
+$dbPassword = ""; 
 $dbname = "DinoDestinations";
 
 // Create connection
 $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -25,11 +24,9 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
 $stmt->bind_param("ss", $username, $hashedPassword);
 
-// Execute the prepared statement
 if ($stmt->execute()) {
     $_SESSION['signup_message'] = "Account created successfully. You can now log in.";
 } else {
-    // Check for a duplicate username error
     if ($conn->errno == 1062) {
         $_SESSION['signup_message'] = "Username already exists. Please choose another one.";
     } else {

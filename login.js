@@ -12,7 +12,6 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Check if the passwords match
 function checkPasswords() {
     var password = document.getElementById('newPassword').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
@@ -23,25 +22,19 @@ function checkPasswords() {
     return true;
 }
 
-// Event listener for the signup form submission
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     if (!checkPasswords()) {
-        event.preventDefault(); // Prevent form submission if passwords don't match
+        event.preventDefault(); 
     } else {
-        // Collect user data or do something with it
+        // Collect user data to do something with it
         var username = document.getElementById('newUsername').value;
-        // Placeholder for where you would handle user data
     }
 });
 
-// Login event
 function login() {
-    // Placeholder for login logic
-    // On successful login, redirect to mainPage.html
     window.location.href = 'mainPage.html';
 }
 
-// When the page loads, click the Login tab
 document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('.tab').click();
 });
