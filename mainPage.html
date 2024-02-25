@@ -5,14 +5,22 @@
     <link rel="stylesheet" href="mainPage.css" />
     <title>Dino Destinations</title>
   </head>
-  <body>
 
+  <body>
+    
     <div class="logo"><img src="./images/dd_logo.png"></div> 
 
     <div id="mainBox">
         <!-- <img src="./images/dino map.png" class="dinomap" alt="dinomap" /> -->
         <div class="Searchbar"><input id="zipCode" name="zipCode" type="text" placeholder="🦖Enter City"></div>
+        <button onclick="searchPlaces()">Search</button>
+        <ul id="placesList"></ul>
     </div>
+
+    <div id="map"></div>
+    <script src="mainPage.js"></script>
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6R-O7AwjY_85moRy93wlYgRFGN2k1Yvk&callback=initMap&v=weekly"
+defer></script>-->
 
   </body>
 </html>
