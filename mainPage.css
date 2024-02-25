@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 
-html{
-    background: linear-gradient(to left, #76b852, #8DC26F, #5C4B51);
-    }
+html {
+    background-image: url(./images/fourDino.gif);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100%; 
+  }
+  
+  
+body {
+    margin: 0; 
+    height: 100%; 
+  }
+  
 
 #mainBox{background: #93dc5c; 
     padding: 20px 20px 20px 20px; 
