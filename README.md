@@ -10,10 +10,7 @@ https://www.youtube.com/watch?v=VF532KDre9g
 
 ## Usage
 
--Sign up
--Log in
--Enter city nearest to you
--Look for dino attractions that interest you
+-Sign up on the main page. Using the credentials you signed up, simply log in and enter a city near you. The page will take you to destinations that feature dinosour attractions using google maps.
 
 ## Technologies Used
 
