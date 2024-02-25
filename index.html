@@ -27,15 +27,15 @@
         </div>
 
         <div id="Signup" class="tab-content">
-            <form id="signupForm" method="POST">
-                <label for="newUsername">New Username:</label>
-                <input type="text" id="newUsername" name="newUsername" required placeholder="Username">
-                <label for="newPassword">New Password:</label>
-                <input type="password" id="newPassword" name="newPassword" required placeholder="Password">
-                <label for="confirmPassword">Confirm New Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
-                <button type="submit">Sign Up</button>
-            </form>
+          <form id="signupForm" action="register.php" method="POST">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="username" required placeholder="Username">
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="password" required placeholder="Password">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
+            <button type="submit">Sign Up</button>
+        </form>
         </div>
     </div>
     <script src="login.js"></script>
