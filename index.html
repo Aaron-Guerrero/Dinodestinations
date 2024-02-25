@@ -13,23 +13,21 @@
     </header>
 
     <div class="tab-container">
-        <button class="tab" onclick="openTab(event, 'Login')">Login</button>
-        <button class="tab" onclick="openTab(event, 'Signup')">Signup</button>
+        <button class="tab" id="loginTab" onclick="openTab(event, 'Login')">Login</button>
+        <button class="tab" id="signupTab" onclick="openTab(event, 'Signup')">Signup</button>
 
         <div id="Login" class="tab-content">
-            <form id="loginForm" action="/submit-form" method="POST">
+            <form id="loginForm" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required placeholder="Username">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required placeholder="Password">          
-                <button type="submit">Login</button>
+                <button type="submit" onclick="login()">Login</button>
             </form>
         </div>
 
         <div id="Signup" class="tab-content">
-            <!-- Add your signup form here -->
-            <!-- Example Signup form -->
-            <form id="signupForm" action="/submit-signup" method="POST">
+            <form id="signupForm" method="POST">
                 <label for="newUsername">New Username:</label>
                 <input type="text" id="newUsername" name="newUsername" required placeholder="Username">
                 <label for="newPassword">New Password:</label>
@@ -40,7 +38,6 @@
             </form>
         </div>
     </div>
-
     <script src="login.js"></script>
 </body>
 </html>
