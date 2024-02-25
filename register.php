@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $dbUsername = "root"; // The default XAMPP MySQL username
 $dbPassword = ""; // The default XAMPP MySQL password is typically empty
@@ -11,9 +13,6 @@ $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-// Rest of your code...
-
 
 // Take the posted form data
 $username = $_POST['username'];
@@ -28,11 +27,17 @@ $stmt->bind_param("ss", $username, $hashedPassword);
 
 // Execute the prepared statement
 if ($stmt->execute()) {
-    echo "New user registered successfully";
+    $_SESSION['message'] = "Account created successfully";
 } else {
-    echo "Error: " . $stmt->error;
+    if ($conn->errno == 1062) { // Error code for duplicate entry
+        $_SESSION['message'] = "Username already exists";
+    } else {
+        $_SESSION['message'] = "Error: " . $stmt->error;
+    }
 }
 
 $stmt->close();
 $conn->close();
+
+header('Location: index.php');
 ?>

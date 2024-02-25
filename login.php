@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $servername = "localhost";
 $dbUsername = "root";
 $dbPassword = ""; // Replace with your actual password, if you have one.
@@ -36,11 +37,13 @@ if ($row = $result->fetch_assoc()) {
         header('Location: mainPage.html');
     } else {
         // Incorrect password
-        echo "Incorrect username or password";
+        $_SESSION['login_message'] = "Incorrect username or password";
+        header('Location: index.php');
     }
 } else {
     // Incorrect username
-    echo "Incorrect username or password";
+    $_SESSION['login_message'] = "Incorrect username or password";
+    header('Location: index.php');
 }
 
 $stmt->close();

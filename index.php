@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +25,7 @@
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required placeholder="Username">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="Password">          
+                <input type="password" id="password" name="password" required placeholder="Password">
                 <button type="submit">Login</button>
             </form>
         </div>
@@ -37,6 +41,12 @@
             <button type="submit">Sign Up</button>
         </form>
         </div>
+        <?php
+        if (isset($_SESSION['login_message'])) {
+            echo "<p>" . $_SESSION['login_message'] . "</p>";
+            unset($_SESSION['login_message']); // Remove the message after displaying it
+        }
+        ?>
     </div>
     <script src="login.js"></script>
 </body>
