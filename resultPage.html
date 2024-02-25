@@ -16,7 +16,7 @@
             const city = urlParams.get('city');
             const map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 12,
-                center: { lat: -34.397, lng: 150.644 }, // Default location
+                center: { lat: -34.397, lng: 150.644 }, 
             });
             const service = new google.maps.places.PlacesService(map);
             const request = {

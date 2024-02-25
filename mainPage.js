@@ -4,7 +4,7 @@ let infowindow;
 
 
 function initMap() {
-    const defaultLocation = { lat: -34.397, lng: 150.644 }; // Default location
+    const defaultLocation = { lat: -34.397, lng: 150.644 }; 
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 12,
         center: defaultLocation,
