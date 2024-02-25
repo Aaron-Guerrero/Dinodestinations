@@ -24,7 +24,8 @@ function createMarker(place) {
         position: place.geometry.location,
     });
     google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(place.name);
-        infowindow.open(map, marker);
+        const infoContent = `<strong>${place.name}</strong><br>${place.formatted_address}`;
+        document.getElementById('infoBox').innerHTML = infoContent;
     });
 }
+
