@@ -27,17 +27,20 @@ $stmt->bind_param("ss", $username, $hashedPassword);
 
 // Execute the prepared statement
 if ($stmt->execute()) {
-    $_SESSION['message'] = "Account created successfully";
+    $_SESSION['signup_message'] = "Account created successfully. You can now log in.";
 } else {
-    if ($conn->errno == 1062) { // Error code for duplicate entry
-        $_SESSION['message'] = "Username already exists";
+    // Check for a duplicate username error
+    if ($conn->errno == 1062) {
+        $_SESSION['signup_message'] = "Username already exists. Please choose another one.";
     } else {
-        $_SESSION['message'] = "Error: " . $stmt->error;
+        $_SESSION['signup_message'] = "Error: " . $stmt->error;
     }
 }
 
 $stmt->close();
 $conn->close();
 
-header('Location: index.php');
+// Redirect back to the front page
+header('Location: index.html');
+exit();
 ?>

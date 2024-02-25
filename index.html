@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,22 +27,16 @@ session_start();
         </div>
 
         <div id="Signup" class="tab-content">
-          <form id="signupForm" action="register.php" method="POST">
-            <label for="newUsername">Username:</label>
-            <input type="text" id="newUsername" name="username" required placeholder="Username">
-            <label for="newPassword">Password:</label>
-            <input type="password" id="newPassword" name="password" required placeholder="Password">
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
-            <button type="submit">Sign Up</button>
-        </form>
+            <form id="signupForm" action="register.php" method="POST">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="username" required placeholder="Username">
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="password" required placeholder="Password">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
+                <button type="submit">Sign Up</button>
+            </form>
         </div>
-        <?php
-        if (isset($_SESSION['login_message'])) {
-            echo "<p>" . $_SESSION['login_message'] . "</p>";
-            unset($_SESSION['login_message']); // Remove the message after displaying it
-        }
-        ?>
     </div>
     <script src="login.js"></script>
 </body>
