@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$dbUsername = "your_database_username";
-$dbPassword = "your_database_password";
-$dbname = "your_database_name";
+$dbUsername = "root"; // The default XAMPP MySQL username
+$dbPassword = ""; // The default XAMPP MySQL password is typically empty
+$dbname = "DinoDestinations";
 
 // Create connection
 $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
@@ -11,6 +11,9 @@ $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+// Rest of your code...
+
 
 // Take the posted form data
 $username = $_POST['username'];
