@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS `DinoDestinations`;
+
 USE DinoDestinations;
 
 CREATE TABLE users (
