@@ -4,7 +4,7 @@ session_start();
 $servername = "localhost";
 $dbUsername = "root"; // The default XAMPP MySQL username
 $dbPassword = ""; // The default XAMPP MySQL password is typically empty
-$dbname = "DinoDestinations";
+$dbname = "dinodestinations";
 
 // Create connection
 $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
