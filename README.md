@@ -14,10 +14,15 @@ Sign up on the main page. Using the credentials you signed up, simply log in and
 
 ## Technologies Used
 
-- [Tech 1]
-- [Tech 2]
-- [Tech 3]
-- ...
+- Javascript
+- CSS
+- api
+- github
+- google-drive
+- google maps
+- html
+- php
+- SQL
 
 ## Challenges
 
